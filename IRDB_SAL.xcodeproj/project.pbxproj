@@ -13,6 +13,7 @@
 		B57ABF6B253F194100918D84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57ABF69253F194100918D84 /* Main.storyboard */; };
 		B57ABF6D253F194500918D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57ABF6C253F194500918D84 /* Assets.xcassets */; };
 		B57ABF70253F194500918D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57ABF6E253F194500918D84 /* LaunchScreen.storyboard */; };
+		B5C71397254A2D0C004D587C /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B57ABF6C253F194500918D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B57ABF6F253F194500918D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B57ABF71253F194500918D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B57ABF6C253F194500918D84 /* Assets.xcassets */,
 				B57ABF6E253F194500918D84 /* LaunchScreen.storyboard */,
 				B57ABF71253F194500918D84 /* Info.plist */,
+				B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */,
 			);
 			path = IRDB_SAL;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C71397254A2D0C004D587C /* IRDBTableViewController.swift in Sources */,
 				B57ABF68253F194100918D84 /* ViewController.swift in Sources */,
 				B57ABF64253F194100918D84 /* AppDelegate.swift in Sources */,
 				B57ABF66253F194100918D84 /* SceneDelegate.swift in Sources */,
