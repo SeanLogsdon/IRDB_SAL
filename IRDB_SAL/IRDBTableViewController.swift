@@ -13,6 +13,15 @@ class IRDBTableViewController: UITableViewController {
     var innerArray1 = ["first thing", "second thing", "third thing"]
     var innerArray2 = ["first thing", "second thing", "third thing", "FOURTH thing!"]
 
+    var mediaModel: MediaDataModel? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var dataController = DataController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,13 +47,17 @@ class IRDBTableViewController: UITableViewController {
             // 5
             navigationItem.titleView = imageView
         
+            //call data controler and then pause
+        dataController.getJSONData(completion: { dataModel in
+            self.mediaModel = dataModel
+        })
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-       // return outerArray.count
-        return 1
+       return outerArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,6 +104,4 @@ class IRDBTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
-
 }
