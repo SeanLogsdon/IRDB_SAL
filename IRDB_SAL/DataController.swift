@@ -30,7 +30,7 @@ class DataController: NSObject {
                 thisData)
                 
                 self.dataModel = thisMediaData
-                print(thisMediaData.franchise)
+                print(thisMediaData.franchise[0].entries[0].name)
                 
                 
                 
