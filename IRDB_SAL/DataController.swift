@@ -26,17 +26,11 @@ class DataController: NSObject {
         
             do {
                 let decoder = JSONDecoder()
-                let thisMediaData = try decoder.decode(MediaDataModel.self, from:
-                thisData)
+                let thisMediaData = try decoder.decode(MediaDataModel.self, from:thisData)
                 
                 self.dataModel = thisMediaData
                 print(thisMediaData.franchise[0].entries[0].name)
                 
-                
-                
-            } catch let err {
-                print("error was: ", err)
-            }
                 // call back the completionHandler and let them know we are done
                 
                 // go back to main thread
@@ -45,7 +39,11 @@ class DataController: NSObject {
                     completion(self.dataModel!)
                 }
                 
+            } catch let err {
+                print("error was: ", err)
             }
-            dataTask.resume()
+                
         }
+        dataTask.resume()
     }
+}

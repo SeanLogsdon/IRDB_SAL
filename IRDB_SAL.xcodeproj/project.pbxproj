@@ -16,6 +16,7 @@
 		B5C71397254A2D0C004D587C /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */; };
 		B5C7139A254A602F004D587C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C71399254A602F004D587C /* DataController.swift */; };
 		B5C7139D254A604A004D587C /* MediaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7139C254A604A004D587C /* MediaDataModel.swift */; };
+		B5C732CB254F684A002DA774 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C732CA254F684A002DA774 /* CastTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
 		B5C71399254A602F004D587C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B5C7139C254A604A004D587C /* MediaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDataModel.swift; sourceTree = "<group>"; };
+		B5C732CA254F684A002DA774 /* CastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B5C71396254A2D0C004D587C /* IRDBTableViewController.swift */,
 				B5C71399254A602F004D587C /* DataController.swift */,
 				B5C7139C254A604A004D587C /* MediaDataModel.swift */,
+				B5C732CA254F684A002DA774 /* CastTableViewController.swift */,
 			);
 			path = IRDB_SAL;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				B5C7139A254A602F004D587C /* DataController.swift in Sources */,
 				B5C71397254A2D0C004D587C /* IRDBTableViewController.swift in Sources */,
+				B5C732CB254F684A002DA774 /* CastTableViewController.swift in Sources */,
 				B5C7139D254A604A004D587C /* MediaDataModel.swift in Sources */,
 				B57ABF68253F194100918D84 /* DetailViewController.swift in Sources */,
 				B57ABF64253F194100918D84 /* AppDelegate.swift in Sources */,

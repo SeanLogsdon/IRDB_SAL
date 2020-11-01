@@ -8,10 +8,6 @@
 import UIKit
 
 class IRDBTableViewController: UITableViewController {
-    
-//    var outerArray = ["First Section Name", "Second Section Name"]
-//    var innerArray1 = ["first thing", "second thing", "third thing"]
-//    var innerArray2 = ["first thing", "second thing", "third thing", "FOURTH thing!"]
 
     var mediaModel: MediaDataModel? {
         didSet {
@@ -80,7 +76,7 @@ class IRDBTableViewController: UITableViewController {
         // Configure the cell...
         cell.textLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].name
         
-        cell.textLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].yearStart
+        cell.detailTextLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].yearStart
 
         
         return cell

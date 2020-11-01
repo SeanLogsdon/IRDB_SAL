@@ -15,8 +15,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var formatLabel: UILabel?
     @IBOutlet var episodeLabel: UILabel?
     @IBOutlet var studioLabel: UILabel?
-    @IBOutlet weak var summaryLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var summaryTextView: UITextView!
     
     
     var detailItem: Entry? {
@@ -41,14 +41,59 @@ class DetailViewController: UIViewController {
         
             
             title = detailItem?.name
+            
+            configureView()
         }
         
         func configureView () {
-            titleLabel?.text = detailItem?.name
-            yearLabel?.text = detailItem?.yearStart
-            formatLabel?.text = detailItem?.format
-          //  episodeLabel?.int = detailItem?.episodes
-            studioLabel?.text = detailItem?.studio
-    }
+            if let entry = detailItem {
+                
+              //  if let thisMediaImage = mediaImage {
+                    
+               // }
+                
+                if let thisTitleLabel = titleLabel {
+                    thisTitleLabel.text = entry.name
+                }
+                if let thisYearLabel = yearLabel {
+                    thisYearLabel.text = entry.yearStart
+                }
+                if let thisFormatLabel = formatLabel {
+                    thisFormatLabel.text = entry.format
+                }
+                if let thisEpisodeLabel = episodeLabel {
+                    if let episodeCount = entry.episodes {
+                        thisEpisodeLabel.text = "\(episodeCount) Episodes"
+                    }else {
+                        thisEpisodeLabel.text = ""
+                    }
+                }
+                if let thisStudioLabel = studioLabel {
+                        thisStudioLabel.text = entry.studio
+                    }
+                    
+                if let thisDescriptionLabel = descriptionLabel{
+                    thisDescriptionLabel.text = entry.description
+                }
+                if let thisSummaryTextView = summaryTextView {
+                    thisSummaryTextView.text = entry.summary
+                }
+                
+                    }
+                }
+    
+    // MARK: - Navigation
 
-}
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showCastList" {
+            
+            let controller = segue.destination as! CastTableViewController
+            controller.castListArray = detailItem?.starring
+            
+        }
+    }
+            }
